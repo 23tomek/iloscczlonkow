@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KWESTIONARIUSZ DO ZAŁOŻENIA SPÓŁKI Z O.O.</title>
+    <style>
+        /* Styl dla pól tekstowych */
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 65%;
+            padding: 6px; 
+            margin: 5px 0;
+            box-sizing: border-box;-box;
+    </style>        
+</head>
+<body>
+
+<h2>KWESTIONARIUSZ DO ZAŁOŻENIA SPÓŁKI Z O.O.</h2>
+
+<form action="/przetwarzanie-formularza" method="post">
+    <!-- Pole tekstowe dla nazwy spółki -->
+    <label for="nazwaSpolki">Nazwa zakładanej spółki:</label>
+    <input type="text" id="nazwaSpolki" name="nazwaSpolki" required>
+
+    <br>
+
+    <!-- Pole tekstowe dla siedziby spółki (miejscowości) -->
+    <label for="siedziba">Siedziba zakładanej spółki:</label>
+    <input type="text" id="siedziba" name="siedziba" placeholder="siedzibą spółki jest miejscowość - proszę wskazać miejscowość" required>
+
+    <br>
+
+    <!-- Pole tekstowe dla adresu spółki -->
+    <label for="adres">Adres zakładanej spółki:</label>
+    <input type="text" id="adres" name="adres" placeholder="ulica, kod pocztowy, miejscowość, poczta" required>
+    
+    <!-- Grupa pytań dotyczących przedmiotu działalności zgodnie z PKD -->
+    <fieldset>
+        <legend>Przedmiot działalności zakładanej spółki zgodnie z klasyfikacją PKD  (Polska Klasyfikacja Działalności) </legend>
+
+    <div style="border: 2px solid #ccc; padding: 5px;">
+        <p>Wyszukując kody PKD można wesprzeć się wyszukiwarką: <a href="https://www.biznes.gov.pl/pl/tabela-pkd" target="_blank">https://www.biznes.gov.pl/pl/tabela-pkd</a></p>
+
+Opis poziomów dla kodów PKD pomocny przy ich wyborze dla zakładanej spółki:
+
+<br>
+
+- poziom pierwszy - SEKCJA - oznaczony jest <b> symbolem jednoliterowym </b>, dzieli ogólną zbiorowość na 21 grupowań rodzajów działalności; nieistotny dla tego kwestionariusza;
+
+<br>
+
+- poziom drugi - DZIAŁ - oznaczony jest <b> dwucyfrowym kodem numerycznym </b>, dzieli ogólną zbiorowość na 88 grupowań rodzajów działalności (format XX);
+
+<br>
+
+- poziom trzeci - GRUPA - oznaczony jest <b> trzycyfrowym kodem numerycznym </b>, obejmuje 272 grupowania rodzajów działalności (format XX.X);
+
+<br>
+
+- poziom czwarty - KLASA - oznaczony jest <b> czterocyfrowym kodem numerycznym </b>, obejmuje 615 grupowań rodzajów działalności (format XX.XX);
+
+<br>
+
+- poziom piąty - PODKLASA - oznaczony jest <b> pięcioznakowym kodem alfanumerycznym </b> i obejmuje 654 grupowania (format XX.XX.X).
+
+
+    </div>
+
+        <!-- Pytanie 1 -->
+        <label for="kodyDzialalnosci">1. Proszę wskazać  przedmiot działalności spółki zgodnie z PKD; mogą być to kody od poziomu drugiego do piątego (czyli w formatach od XX do XX.XX.X); tzn. skoro dział obejmuje wszystkie niższe poziomy, to jeśli w danym przypadku miałyby zostać wskazane wszystkie kody na poziomie podklasy (w formacie XX.XX.X) z danego działu, zamiast tego można wskazać numer tego działu (w formacie XX):</label>
+        <input type="text" id="kodyDzialalnosci" name="kodyDzialalnosci" required>
+
+        <br>
+
+        <!-- Pytanie 2 -->
+        <label for="przewazajacaDzialalnosc">2. Spośród powyższych kodów PKD proszę wskazać jeden kod przedmiotu przeważającej działalności; <u> musi być to kod na poziomie najniższym, czyli podklasy (w formacie XX.XX.X):</u></label>
+        <input type="text" id="przewazajacaDzialalnosc" name="przewazajacaDzialalnosc" required>
+
+        <br>
+
+        <!-- Pytanie 3 -->
+        <label for="wyodrebnienieKodow">3. W przypadku wskazania w pkt. 1 łącznie więcej niż 10 kodów, proszę o wyodrębnienie 9 kodów (z wyłączeniem kodu działalności przeważającej), które powinny zostać ujawnione w rejestrze przedsiębiorców KRS; pozostałe kody zostaną zawarte w umowie spółki, ale nie będą widoczne w rejestrze przedsiębiorców KRS; jeśli w umowie spółki wskazany został dany dział (w formacie XX), do ujawnienia w KRS można wskazać kody spośród jego niższych poziomów (np. w formacie XX.X lub XX.XX.X):</label>
+        <input type="text" id="wyodrebnienieKodow" name="wyodrebnienieKodow" required>
+
+    </fieldset>
+
+    <br>
+
+    <!-- Sposób reprezentacji spółki -->
+    <fieldset>
+        <legend>Sposób reprezentacji zakładanej spółki</legend>
+
+    <div style="border: 2px solid #ccc; padding: 3px; display: inline-block;">
+    <p style="margin: 0;">Spółkę reprezentuje zarząd, w skład którego musi wchodzić co najmniej jedna osoba.</p>
+   </div>
+
+   <br> 
+
+        <br>
+        <!-- Pytanie 4 -->
+        <label>Jeżeli zarząd spółki będzie składał się z więcej niż jednej osoby - jaki będzie rodzaj reprezentacji?</label>
+        <br>
+        <input type="checkbox" id="reprezentacjaJednoosobowa" name="reprezentacja" value="jednoosobowy">
+        <label for="reprezentacjaJednoosobowa">a) jednoosobowy (każdy członek zarządu może reprezentować spółkę samodzielnie):</label>
+
+        <br>
+
+        <!-- Pytanie 5 -->
+        <input type="checkbox" id="reprezentacjaLaczna" name="reprezentacja" value="lacznosci">
+        <label for="reprezentacjaLaczna">b) łączny - proszę wskazać z kim/w jaki sposób: </label>
+        <input type="text" id="lacznoscSposob" name="lacznoscSposob" placeholder="np. z drugim członkiem zarządu, z prokurentem">
+
+        <br>
+
+        <!-- Pytanie 6 -->
+        <input type="checkbox" id="reprezentacjaInna" name="reprezentacja" value="inna">
+        <label for="reprezentacjaInna">c) inny (proszę wskazać oczekiwany sposób):</label>
+        <input type="text" id="innySposob" name="innySposob" placeholder="np. uzależnienie sposobu reprezentacji spółki od wartości transakcji">
+    </fieldset>
+
+    <!-- Dane osób, które będą członkami zarządu -->
+    <fieldset>
+        <legend>Dane osób, które będą członkami zarządu zakładanej spółki</legend>
+
+        <!-- Pytanie 7 -->
+        <label for="iloscCzlonkow">Ilu zostanie powołanych członków zarządu?</label>
+        <select id="iloscCzlonkow" name="iloscCzlonkow">
+            <option value="blank">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+
+        <br>
+
+        <!-- Dynamiczne generowanie pól dla każdego członka zarządu -->
+    <div id="daneCzlonkow"></div>
+
+    <script type="text/javascript" src="https://raw.githubusercontent.com/23tomek/iloscczlonkow/main/src/index.js"></script>
+
+
+        </fieldset>
+<!-- Sekcja "Prokurent" -->
+<fieldset>
+    <legend>Prokurenci zakładanej spółki</legend>
+
+    <!-- Wyjaśnienie -->
+    <div style="border: 2px solid #ccc; padding: 3px; display: inline-block;">
+    <p style="margin: 0;">Nie ma obowiązku powołania w spółce prokurenta, ale może on pomóc w bieżącym prowadzeniu działalności, zwłaszcza gdy zarząd nie jest w pełni dyspozycyjny.</p>
+   </div>
+
+
+    <!-- Pytanie 8 -->
+    <br>
+    <input type="checkbox" id="czyProkuraCheckbox" name="czyProkuraCheckbox" value="tak">
+    <label for="czyProkuraCheckbox">Czy w spółce będzie powołany prokurent albo prokurenci?</label>
+
+    <!-- Dynamiczne generowanie pól dla ilości prokurentów -->
+    <div id="iloscProkurentowDiv"></div>
+
+    <!-- Dynamiczne generowanie pól dla każdego prokurenta -->
+    <div id="daneProkurentow"></div>
+
+<script>
+    document.getElementById('czyProkuraCheckbox').addEventListener('change', function () {
+        var czyProkura = this.checked;
+        var iloscProkurentowDiv = document.getElementById('iloscProkurentowDiv');
+        var daneProkurentowDiv = document.getElementById('daneProkurentow');
+        iloscProkurentowDiv.innerHTML = ''; // Wyczyszczenie poprzednich pól
+        daneProkurentowDiv.innerHTML = ''; // Wyczyszczenie poprzednich pól
+
+        if (czyProkura) {
+            // Pytanie 9
+            iloscProkurentowDiv.innerHTML += '<label for="iloscProkurentow">Jeśli tak, proszę wskazać ilu:</label>' +
+                '<select id="iloscProkurentow" name="iloscProkurentow">' +
+                '<option value="-">-</option>' +
+                '<option value="1">1</option>' +
+                '<option value="2">2</option>' +
+                '<option value="3">3</option>' +
+                '<option value="4">4</option>' +
+                '<option value="5">5</option>' +
+                '<option value="6">6</option>' +
+                '<option value="7">7</option>' +
+                '</select>';
+
+            // Dynamiczne generowanie pól dla każdego prokurenta
+            var iloscProkurentowSelect = document.getElementById('iloscProkurentow');
+            iloscProkurentowSelect.addEventListener('change', function () {
+                var iloscProkurentow = parseInt(this.value);
+
+                daneProkurentowDiv.innerHTML = ''; // Wyczyszczenie poprzednich pól
+
+                for (var i = 1; i <= iloscProkurentow; i++) {
+                    var divProkurenta = document.createElement('div');
+
+                    // Tytuł prokurenta
+                    divProkurenta.innerHTML = '<br><strong>Prokurent ' + i + '</strong>';
+
+                    // Imię 
+                    divProkurenta.innerHTML += '<br><label for="imieProkurent' + i + '">Imię pierwsze:</label>' +
+                        '<input type="text" id="imieProkurent' + i + '" name="imieProkurent' + i + '" required>';
+
+                    // Drugie imię 
+                    divProkurenta.innerHTML += '<br><label for="drugieImieProkurent' + i + '">Imię drugie:</label>' +
+                        '<input type="text" id="drugieImieProkurent' + i + '" name="drugieImieProkurent' + i + '" required>';
+
+                    // Nazwisko 
+                    divProkurenta.innerHTML += '<br><label for="nazwiskoProkurent' + i + '">Nazwisko:</label>' +
+                        '<input type="text" id="nazwiskoProkurent' + i + '" name="nazwiskoProkurent' + i + '" required>';
+
+                    // Adres
+                    divProkurenta.innerHTML += '<br><label for="adresDoreczenProkurent' + i + '">Adres:</label>' +
+                        '<input type="text" id="adresDoreczenProkurent' + i + '" name="adresDoreczenProkurent' + i + '" required>';
+
+                    // Adres do doręczeń
+                    divProkurenta.innerHTML += '<br><label for="adresDoreczenProkurent' + i + '">Adres do doręczeń:</label>' +
+                        '<input type="text" id="adresDoreczenProkurent' + i + '" name="adresDoreczenProkurent' + i + '" required>';
+
+                    // Rodzaj prokury
+                      divProkurenta.innerHTML += '<br><label for="rodzajProkury' + i + '">Rodzaj prokury:</label>' +
+                            '<div>' +
+                            '<input type="checkbox" id="samoistna' + i + '" name="rodzajProkury' + i + '" value="samoistna">' +
+                            '<label for="samoistna' + i + '">Samoistna</label>' +
+                            '</div>' +
+                            '<div>' +
+                            '<input type="checkbox" id="lacznoscProkury' + i + '" name="rodzajProkury' + i + '" value="lacznosc">' +
+                            '<label for="lacznoscProkury' + i + '">Łączna – proszę wskazać z kim/jaki jest oczekiwany sposób funkcjonowania prokury łącznej:</label>' +
+                            '<input type="text" id="lacznoscProkurySposob' + i + '" name="lacznoscProkurySposob' + i + '" placeholder="np. konieczność działania z drugim prokurentem albo członkiem zarządu: ">' +
+                            '</div>';    
+
+                    // Pole "Czy posiada PESEL?"
+                    divProkurenta.innerHTML += '<br><label for="czyPosiadaPesel' + i + '">Czy posiada PESEL?</label>' +
+                        '<select id="czyPosiadaPesel' + i + '" name="czyPosiadaPesel' + i + '" onchange="togglePeselInput(' + i + ')">' +
+                        '<option value="-">-</option>' +
+                        '<option value="tak">Tak</option>' +
+                        '<option value="nie">Nie</option>' +
+                        '</select>';
+
+                    divProkurenta.innerHTML += '<div id="daneCzlonka' + i + '"></div>';
+                    daneProkurentowDiv.appendChild(divProkurenta);
+
+                    // Obsługa zmiany odpowiedzi na pytanie o osobę prawną
+                    document.getElementById('czyPosiadaPesel' + i).addEventListener('change', function () {
+                        var czyPosiadaPesel = this.value;
+                        var indexCzlonka = this.id.slice(-1);
+                        var daneCzlonkaDiv = document.getElementById('daneCzlonka' + indexCzlonka);
+                        daneCzlonkaDiv.innerHTML = ''; // Wyczyszczenie poprzednich pól
+
+                        if (czyPosiadaPesel === 'tak') {
+                            // Pole PESEL
+                            daneCzlonkaDiv.innerHTML += '<br><label for="peselCzlonka' + indexCzlonka + '">PESEL:</label>' +
+                                '<input type="text" id="peselCzlonka' + indexCzlonka + '" name="peselCzlonka' + indexCzlonka + '" required>';
+                        } else {
+                            // Data ur.
+                            daneCzlonkaDiv.innerHTML += '<br><label for="dataCzlonka' + indexCzlonka + '">Data urodzenia:</label>' +
+                                '<input type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required>';
+                        }
+                        
+                        daneProkurentowDiv.appendChild(divProkurenta);
+                    });
+                }
+            });
+        }
+    });
+</script>
+
+</fieldset>
+   
+   <!-- Sekcja "Kapitał zakładowy spółki" -->
+<fieldset>
+    <legend>Kapitał zakładowy zakładanej spółki</legend>
+
+   <div style="border: 2px solid #ccc; padding: 3px; display: inline-block;">
+    <p style="margin: 0;">Kapitał zakładowy dzielimy na wartość nominalną jednego udziału i w ten sposób powstaje liczba udziałów do rozdysponowania między wspólników spółki, np. kapitał zakładowy 5000 zł : wartość 1 udziału 50 zł = 100 udziałów do rozdysponowania pomiędzy wspólników spółki.</p>
+   </div>
+
+
+    <!-- Pytanie o kapitał zakładowy spółki -->
+    <label for="kapitalZakladowy">Kapitał zakładowy spółki:</label>
+    <input type="number" id="kapitalZakladowy" name="kapitalZakladowy" min="5000" placeholder="minimum 5 000 zł" required>
+
+    <br>
+    
+    <!-- Pytanie o wartość nominalną jednego udziału -->
+    <label for="wartoscNominalna">Wartość nominalna jednego udziału w kapitale zakładowym spółki:</label>
+    <input type="number" id="wartoscNominalna" name="wartoscNominalna" min="50" placeholder="minimum 50 zł" required>
+</fieldset>
+
+<!-- Sekcja "Wspólnicy spółki" -->
+<fieldset>
+    <legend>Wspólnicy zakładanej spółki</legend>
+
+    <!-- Pytanie o ilość wspólników -->
+    <label for="iloscWspolnikow">Ilu jest wspólników spółki?:</label>
+    <select id="iloscWspolnikow" name="iloscWspolnikow">
+        <option value="blank">-</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+
+    <!-- Dynamiczne generowanie pól dla każdego wspólnika -->
+    <div id="daneWspolnikow"></div>
+
+    <script>
+        document.getElementById('iloscWspolnikow').addEventListener('change', function () {
+            var iloscWspolnikow = parseInt(this.value);
+            var daneWspolnikowDiv = document.getElementById('daneWspolnikow');
+            daneWspolnikowDiv.innerHTML = ''; // Wyczyszczenie poprzednich pól
+
+            for (var i = 1; i <= iloscWspolnikow; i++) {
+                var divWspolnika = document.createElement('div');
+
+                // Tytuł wspólnika
+                divWspolnika.innerHTML = '<br><strong>Wspólnik ' + i + '</strong>';
+
+                // Pytanie o osobę fizyczna
+                divWspolnika.innerHTML += '<br><label for="czyOsobaFizyczna' + i + '">Czy wspólnik jest osobą fizyczną?</label>' +
+                    '<select id="czyOsobaFizyczna' + i + '" name="czyOsobaFizyczna' + i + '">' +
+                    '<option value="-">-</option>' +
+                    '<option value="tak">Tak</option>' +
+                    '<option value="nie">Nie</option>' +
+                    '</select>';
+
+                // Dynamiczne generowanie pól w zależności od odpowiedzi na pytanie
+                divWspolnika.innerHTML += '<div id="daneWspolnika' + i + '"></div>';
+
+                daneWspolnikowDiv.appendChild(divWspolnika);
+
+                // Obsługa zmiany odpowiedzi na pytanie o osobę prawną
+                document.getElementById('czyOsobaFizyczna' + i).addEventListener('change', function () {
+                    var czyOsobaFizyczna = this.value;
+                    var indexWspolnika = this.id.slice(-1);
+                    var daneWspolnikaDiv = document.getElementById('daneWspolnika' + indexWspolnika);
+                    daneWspolnikaDiv.innerHTML = ''; // Wyczyszczenie poprzednich pól
+
+                    if (czyOsobaFizyczna === 'tak') {
+                        // IMIE
+                        daneWspolnikaDiv.innerHTML += '<br><label for="imieWspolnika' + indexWspolnika + '">Imię pierwsze:</label>' +
+                            '<input type="text" id="imieWspolnika' + indexWspolnika + '" name="imieWspolnika' + indexWspolnika + '" required>';
+                        // drugie IMIE
+                        daneWspolnikaDiv.innerHTML += '<br><label for="drugieimieWspolnika' + indexWspolnika + '">Imię drugie:</label>' +
+                            '<input type="text" id="drugieimieWspolnika' + indexWspolnika + '" name="drugieimieWspolnika' + indexWspolnika + '" required>';    
+                        // NAZWISKO
+                        daneWspolnikaDiv.innerHTML += '<br><label for="nazwiskoWspolnika' + indexWspolnika + '">Nazwisko:</label>' +
+                            '<input type="text" id="nazwiskoWspolnika' + indexWspolnika + '" name="nazwiskoWspolnika' + indexWspolnika + '" required>';
+                        // ADRES        
+                        daneWspolnikaDiv.innerHTML += '<br><label for="adresWspolnika' + indexWspolnika + '">Adres:</label>' +
+                            '<input type="text" id="adresWspolnika' + indexWspolnika + '" name="adresWspolnika' + indexWspolnika + '" required>';
+                        // Adres do doręczeń
+                        daneWspolnikaDiv.innerHTML += '<br><label for="adresDorWspolnika' + indexWspolnika + '">Adres do doręczeń:</label>' +
+                            '<input type="text" id="adresDorWspolnika' + indexWspolnika + '" name="adresDorWspolnika' + indexWspolnika + '" required>';
+                        
+                        // PESEL
+                        daneWspolnikaDiv.innerHTML += '<br><label for="peselWspolnika' + indexWspolnika + '">PESEL:</label>' +
+                            '<input type="text" id="peselWspolnika' + indexWspolnika + '" name="peselWspolnika' + indexWspolnika + '" required>';
+                        
+                        //DATA ur
+                        daneWspolnikaDiv.innerHTML += '<br><label for="dataUrodzeniaWspolnika' + indexWspolnika + '">Data urodzenia:</label>' +
+                            '<input type="date" id="dataUrodzeniaWspolnika' + indexWspolnika + '" name="dataUrodzeniaWspolnika' + indexWspolnika + '" required>';
+                        
+                        // Liczba udziałow
+                        daneWspolnikaDiv.innerHTML += '<br><label for="liczbaUdzialowWspolnika' + indexWspolnika + '">Liczba udziałów, jakie wspólnik ma posiadać w kapitale zakładowym zakładanej spółki:</label>' +
+                            '<input type="text" id="liczbaUdzialowWspolnika' + indexWspolnika + '" name="liczbaUdzialowWspolnika' + indexWspolnika + '" required>';
+                        
+                        // Rodzaj wkładu
+                        daneWspolnikaDiv.innerHTML += '<br><label for="rodzajWniesionegoWkladu' + indexWspolnika + '">Rodzaj wkładu wnoszonego do zakładanej spółki:</label>' +
+                            '<select id="rodzajWniesionegoWkladu' + indexWspolnika + '" name="rodzajWniesionegoWkladu' + indexWspolnika + '">' +
+                            '<option value="-">-</option>' +
+                            '<option value="pieniężny">pieniężny</option>' +
+                            '<option value="niepieniężny">niepieniężny</option>' +
+                            '<option value="mieszany">mieszany (pieniężny i niepieniężny)</option>' +
+                            '</select>';
+                        
+                        // wysokosc wkładu
+                        daneWspolnikaDiv.innerHTML += '<br><label for="wysokoscWkladu' + indexWspolnika + '"><b>Wysokość wkładu</b> - w odniesieniu do wkładu pieniężnego albo <b>wartość wkładu</b> - w odniesieniu do wkładu niepieniężnego; w przypadku wkładu <b>mieszanego</b> należy zsumować wysokość i wartość poszczególnych wkładów: </label>' +
+                            '<input type="text" id="wysokoscWkladu' + indexWspolnika + '" name="wysokoscWkladu' + indexWspolnika + '" placeholder="wysokość lub wartość wkładu należy podawać w PLN" required>';
+                        
+                        // Opis wkladu
+                        daneWspolnikaDiv.innerHTML += '<br><label for="opisWkladu' + indexWspolnika + '">W przypadku wkładu <b>niepieniężnego</b> proszę dokładnie opisać przedmiot tego wkładu: </label>' +
+                            '<input type="text" id="opisWkladu' + indexWspolnika + '" name="opisWkladu' + indexWspolnika + '" placeholder="np. samochód marki X, model X, VIN: X - o wartości (PLN) X">';                           
+                    //NIE jest os fizyczna
+                    } else {
+                        // Firma 
+                        daneWspolnikaDiv.innerHTML += '<br><label for="firmaWspolnika' + indexWspolnika + '">Firma (nazwa):</label>' +
+                            '<input type="text" id="firmaWspolnika' + indexWspolnika + '" name="firmaWspolnika' + indexWspolnika + '" required>';
+                        
+                        //Siedziba 
+                        daneWspolnikaDiv.innerHTML += '<br><label for="siedzibaWspolnika' + indexWspolnika + '">Siedziba (adres):</label>' +
+                            '<input type="text" id="siedzibaWspolnika' + indexWspolnika + '" name="siedzibaWspolnika' + indexWspolnika + '" required>';
+                        
+                        // nr KRS
+                        daneWspolnikaDiv.innerHTML += '<br><label for="krsWspolnika' + indexWspolnika + '">nr KRS:</label>' +
+                            '<input type="text" id="krsWspolnika' + indexWspolnika + '" name="KRSWspolnika' + indexWspolnika + '" required>';
+                        
+                       // liczba udziałów
+                        daneWspolnikaDiv.innerHTML += '<br><label for="liczbaUdzialowWspolnika' + indexWspolnika + '">Liczba udziałów, jakie wspólnik ma posiadać w kapitale zakładowym zakładanej spółki:</label>' +
+                            '<input type="text" id="liczbaUdzialowWspolnika' + indexWspolnika + '" name="liczbaUdzialowWspolnika' + indexWspolnika + '" required>';
+                        // Rodzaj wkładu
+                        daneWspolnikaDiv.innerHTML += '<br><label for="rodzajWniesionegoWkladu' + indexWspolnika + '">Rodzaj wkładu wnoszonego do zakładanej spółki:</label>' +
+                            '<select id="rodzajWniesionegoWkladu' + indexWspolnika + '" name="rodzajWniesionegoWkladu' + indexWspolnika + '">' +
+                            '<option value="-">-</option>' +
+                            '<option value="pieniężny">pieniężny</option>' +
+                            '<option value="niepieniężny">niepieniężny</option>' +
+                            '<option value="mieszany">mieszany (pieniężny i niepieniężny)</option>' +
+                            '</select>';
+                        
+                        // wysokosc wkładu
+                        daneWspolnikaDiv.innerHTML += '<br><label for="wysokoscWkladu' + indexWspolnika + '"><b>Wysokość wkładu</b> – w odniesieniu do wkładu pieniężnego albo <b>wartość wkładu</b> – w odniesieniu do wkładu niepieniężnego; w przypadku wkładu <b>mieszanego</b> należy zsumować wysokość i wartość poszczególnych wkładów: </label>' +
+                            '<input type="text" id="wysokoscWkladu' + indexWspolnika + '" name="wysokoscWkladu' + indexWspolnika + '" placeholder="wysokość lub wartość wkładu należy podawać w PLN"required>';
+                        
+                        // Opis wkladu
+                        daneWspolnikaDiv.innerHTML += '<br><label for="opisWkladu' + indexWspolnika + '">W przypadku wkładu <b>niepieniężnego</b> proszę dokładnie opisać przedmiot tego wkładu: </label>' +
+                            '<input type="text" id="opisWkladu' + indexWspolnika + '" name="opisWkladu' + indexWspolnika + '" placeholder="np. samochód marki X, model X, VIN: X - o wartości (PLN) X" >';
+                        
+                        //spospob reprezentacji
+                        daneWspolnikaDiv.innerHTML += '<br><label for="sposobReprezentacji' + indexWspolnika + '">Sposób reprezentacji spółki - wspólnika:</label>' +
+                            '<input type="text" id="sposobReprezentacji' + indexWspolnika + '" name="sposobReprezentacji' + indexWspolnika + '" placeholder="np. zarząd w sp. z o.o., wspólnicy w sp. j.">';
+
+                        // zasady reprezentacji zrobic
+                        daneWspolnikaDiv.innerHTML += '<br><label for="ZasadyreprezentacjiSpolki' + indexWspolnika + '">Zasady reprezentacji spółki - wspólnika: </label>' +
+                            '<select id="ZasadyreprezentacjiSpolki' + indexWspolnika + '" name="ZasadyreprezentacjiSpolki' + indexWspolnika + '">' +
+                            '<option value="-">-</option>' +
+                            '<option value="Indywidualna">indywidualna (każda osoba samodzielnie);</option>' +
+                            '<option value="Inna">inna</option>' +
+                            '</select>';
+                            
+                        // sposób reprezentacji spólki zrobic
+                        daneWspolnikaDiv.innerHTML += '<br><label for="sposobReprezentacji' + indexWspolnika + '">W przypadku poprzedniego wyboru <b>"inna"</b> proszę wskazać zasady reprezentacji: </label>' +
+                            '<input type="text" id="sposobReprezentacji' + indexWspolnika + '" name="sposobReprezentacji' + indexWspolnika + '">'; 
+                        // Pytanie o ilość osób uprawnionych do reprezentacji
+                      daneWspolnikaDiv.innerHTML += '<br><label for="iloscUprawnionych' + indexWspolnika + '">Ile osób uprawnionych jest do reprezentacji?</label>' +
+                          '<select id="iloscUprawnionych' + indexWspolnika + '" name="iloscUprawnionych' + indexWspolnika + '">' +
+                          '<option value="-">-</option>' +
+                          '<option value="1">1</option>' +
+                          '<option value="2">2</option>' +
+                          '<option value="3">3</option>' +
+                          '<option value="4">4</option>' +
+                          '<option value="5">5</option>' +
+                          '<option value="6">6</option>' +
+                          '<option value="7">7</option>' +
+                          '</select>' +
+                          '<div id="reprezentanci' + indexWspolnika + '"/>'
+                          ;
+
+                      // Dynamiczne generowanie pól dla każdej osoby uprawnionej do reprezentacji
+                      var iloscUprawnionychSelect = document.getElementById('iloscUprawnionych' + indexWspolnika);
+                      iloscUprawnionychSelect.addEventListener('change', function () {
+                          var iloscUprawnionych = parseInt(this.value);
+                          var reprezentaciDiv=document.getElementById('reprezentanci' + indexWspolnika);
+                          reprezentaciDiv.innerHTML='';
+                          for (var j = 1; j <= iloscUprawnionych; j++) {
+                              var osobaDiv = document.createElement('div');
+                              osobaDiv.innerHTML += '<br><strong>Osoba ' + j + ' uprawniona do reprezentacji:</strong>';
+                              osobaDiv.innerHTML += '<br><label for="imieOsobaUprawniona' + indexWspolnika + '_' + j + '">1. Imię pierwsze:</label>' +
+                                  '<input type="text" id="imieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
+                              osobaDiv.innerHTML += '<br><label for="imieDrugieOsobaUprawniona' + indexWspolnika + '_' + j + '">2. Imię drugie:</label>' +
+                                  '<input type="text" id="imieDrugieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieDrugieOsobaUprawniona' + indexWspolnika + '' + j + '">';
+                              osobaDiv.innerHTML += '<br><label for="nazwiskoOsobaUprawniona' + indexWspolnika + '_' + j + '">3. Nazwisko:</label>' +
+                                  '<input type="text" id="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" name="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
+                              osobaDiv.innerHTML += '<br><label for="adresOsobaUprawniona' + indexWspolnika + '_' + j + '">4. Adres:</label>' +
+                                  '<input type="text" id="adresOsobaUprawniona' + indexWspolnika + '' + j + '" name="adresOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
+                              osobaDiv.innerHTML += '<br><label for="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '_' + j + '">5. Adres do doręczeń:</label>' +
+                                  '<input type="text" id="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '' + j + '" name="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
+                              osobaDiv.innerHTML += '<br><label for="peselOsobaUprawniona' + indexWspolnika + '_' + j + '">6. PESEL:</label>' +
+                                  '<input type="text" id="peselOsobaUprawniona' + indexWspolnika + '' + j + '" name="peselOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
+                              
+
+                              reprezentaciDiv.appendChild(osobaDiv);
+                           }
+                      });}
+
+                });
+            }
+        });
+    </script>
+</fieldset>
+
+    <br>
+<!-- Pole tekstowe dla innych wymagań spólki -->
+    <label for="inneWymagania">Inne wymagania dotyczące zakładanej spółki:</label>
+    <input type="text" id="inneWymagania" name="inneWymagania" placeholder="proszę wskazać, jeśli w zakresie zorganizowania struktury spółki pozostają kwestie nieobjęte kwestionariuszem lub powstały jakieś pytania" required>
+    <br>
+
+    <div style="border: 2px solid #ccc; padding: 3px; display: inline-block;">
+    <p style="margin: 0;">To już wszystko, dzięki za wypełnienie kwestionariusza! Wskazanie w nim dokładnych danych pozwoli nam sprawnie przejść do dalszych działań i szybkiego założenia Twojej spółki z o.o. Teraz w opraciu o przekazane dane zajmiemy się przygotowaniem odpowiednich dokumentów, jednak w międzyczasie możemy kontaktować się z Tobą w celu uzupełnienia potrzebnych nam informacji o zakładanej spółce.  
+    <br> 
+<br> Jeśli masz pytania dotyczące kwestionariusza, procesu zakładania Twojej spółki z o.o. lub inne, skontaktuj się z prawnikiem z Sawicki Legal, który zakłada Twoją spółkę.</p>
+   </div>
+
+</form>
+<!-- Przycisk do wysyłania formularza -->
+    <input type="submit" value="Wyślij">
+</body>
+</html>
