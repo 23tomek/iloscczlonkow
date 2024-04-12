@@ -226,7 +226,7 @@ function activate_script() {
                     
                     // Rodzaj wkładu
                     daneWspolnikaDiv.innerHTML += '<br><label for="rodzajWniesionegoWkladu' + indexWspolnika + '">Rodzaj wkładu wnoszonego do zakładanej spółki:</label>' +
-                        '<select id="rodzajWniesionegoWkladu' + indexWspolnika + '" name="rodzajWniesionegoWkladu' + indexWspolnika + '">' +
+                        '<select class="select-field w-select" id="rodzajWniesionegoWkladu' + indexWspolnika + '" name="rodzajWniesionegoWkladu' + indexWspolnika + '">' +
                         '<option value="-">-</option>' +
                         '<option value="pieniężny">pieniężny</option>' +
                         '<option value="niepieniężny">niepieniężny</option>' +
