@@ -32,7 +32,7 @@ function activate_script() {
     
             // Funkcja w zarządzie
             divCzlonka.innerHTML += '<br><label for="funkcjaZarzadzie' + i + '">Funkcja w zarządzie: </label>' +
-                '<input type="text" id="funkcjaZarzadzie' + i + '" name="funkcjaZarzadzie' + i + '" required class="form-input 2" placeholder="Proszę wskazać funkcję (np. prezes zarządu, członek zarządu)">';
+                '<input  class="form-input-2 w-input" maxlength="256" type="text" id="funkcjaZarzadzie' + i + '" name="funkcjaZarzadzie' + i + '" required placeholder="Proszę wskazać funkcję (np. prezes zarządu, członek zarządu)">';
     
             // Pole "Czy posiada PESEL?"
             divCzlonka.innerHTML += '<br><label for="czyPosiadaPesel' + i + '">Czy posiada PESEL?</label>' +
