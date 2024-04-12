@@ -36,7 +36,7 @@ function activate_script() {
     
             // Pole "Czy posiada PESEL?"
             divCzlonka.innerHTML += '<br><label for="czyPosiadaPesel' + i + '">Czy posiada PESEL?</label>' +
-                '<select id="czyPosiadaPesel' + i + '" name="czyPosiadaPesel' + i + '" onchange="togglePeselInput(' + i + ')">' +
+                '<select class="select-field w-select" id="czyPosiadaPesel' + i + '" name="czyPosiadaPesel' + i + '" onchange="togglePeselInput(' + i + ')">' +
                 '<option value="-">-</option>' +
                 '<option value="tak">Tak</option>' +
                 '<option value="nie">Nie</option>' +
@@ -74,7 +74,7 @@ function activate_script() {
         if (czyProkura) {
             // Pytanie 9
             iloscProkurentowDiv.innerHTML += '<label for="iloscProkurentow">Jeśli tak, proszę wskazać ilu:</label>' +
-                '<select id="iloscProkurentow" name="iloscProkurentow">' +
+                '<select class="select-field w-select" id="iloscProkurentow" name="iloscProkurentow">' +
                 '<option value="-">-</option>' +
                 '<option value="1">1</option>' +
                 '<option value="2">2</option>' +
@@ -125,14 +125,14 @@ function activate_script() {
                             '<label for="samoistna' + i + '">Samoistna</label>' +
                             '</div>' +
                             '<div>' +
-                            '<input class="select-field w-select" type="checkbox" id="lacznoscProkury' + i + '" name="rodzajProkury' + i + '" value="lacznosc">' +
+                            '<input type="checkbox" id="lacznoscProkury' + i + '" name="rodzajProkury' + i + '" value="lacznosc">' +
                             '<label for="lacznoscProkury' + i + '">Łączna – proszę wskazać z kim/jaki jest oczekiwany sposób funkcjonowania prokury łącznej:</label>' +
                             '<input class="form-input-2 w-input" maxlength="256" type="text" id="lacznoscProkurySposob' + i + '" name="lacznoscProkurySposob' + i + '" placeholder="np. konieczność działania z drugim prokurentem albo członkiem zarządu: ">' +
                             '</div>';    
 
                     // Pole "Czy posiada PESEL?"
                     divProkurenta.innerHTML += '<br><label for="czyPosiadaPesel' + i + '">Czy posiada PESEL?</label>' +
-                        '<select id="czyPosiadaPesel' + i + '" name="czyPosiadaPesel' + i + '" onchange="togglePeselInput(' + i + ')">' +
+                        '<select class="select-field w-select" id="czyPosiadaPesel' + i + '" name="czyPosiadaPesel' + i + '" onchange="togglePeselInput(' + i + ')">' +
                         '<option value="-">-</option>' +
                         '<option value="tak">Tak</option>' +
                         '<option value="nie">Nie</option>' +
@@ -177,7 +177,7 @@ function activate_script() {
 
             // Pytanie o osobę fizyczna
             divWspolnika.innerHTML += '<br><label for="czyOsobaFizyczna' + i + '">Czy wspólnik jest osobą fizyczną?</label>' +
-                '<select id="czyOsobaFizyczna' + i + '" name="czyOsobaFizyczna' + i + '">' +
+                '<select class="select-field w-select" id="czyOsobaFizyczna' + i + '" name="czyOsobaFizyczna' + i + '">' +
                 '<option value="-">-</option>' +
                 '<option value="tak">Tak</option>' +
                 '<option value="nie">Nie</option>' +
@@ -259,7 +259,7 @@ function activate_script() {
                         '<input  class="form-input-2 w-input" maxlength="256"type="text" id="liczbaUdzialowWspolnika' + indexWspolnika + '" name="liczbaUdzialowWspolnika' + indexWspolnika + '" required">';
                     // Rodzaj wkładu
                     daneWspolnikaDiv.innerHTML += '<br><label for="rodzajWniesionegoWkladu' + indexWspolnika + '">Rodzaj wkładu wnoszonego do zakładanej spółki:</label>' +
-                        '<select id="rodzajWniesionegoWkladu' + indexWspolnika + '" name="rodzajWniesionegoWkladu' + indexWspolnika + '">' +
+                        '<select class="select-field w-select" id="rodzajWniesionegoWkladu' + indexWspolnika + '" name="rodzajWniesionegoWkladu' + indexWspolnika + '">' +
                         '<option value="-">-</option>' +
                         '<option value="pieniężny">pieniężny</option>' +
                         '<option value="niepieniężny">niepieniężny</option>' +
