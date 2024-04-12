@@ -125,9 +125,9 @@ function activate_script() {
                             '<label for="samoistna' + i + '">Samoistna</label>' +
                             '</div>' +
                             '<div>' +
-                            '<input type="checkbox" id="lacznoscProkury' + i + '" name="rodzajProkury' + i + '" value="lacznosc">' +
+                            '<input class="select-field w-select" type="checkbox" id="lacznoscProkury' + i + '" name="rodzajProkury' + i + '" value="lacznosc">' +
                             '<label for="lacznoscProkury' + i + '">Łączna – proszę wskazać z kim/jaki jest oczekiwany sposób funkcjonowania prokury łącznej:</label>' +
-                            '<input type="text" id="lacznoscProkurySposob' + i + '" name="lacznoscProkurySposob' + i + '" placeholder="np. konieczność działania z drugim prokurentem albo członkiem zarządu: ">' +
+                            '<input class="form-input-2 w-input" maxlength="256" type="text" id="lacznoscProkurySposob' + i + '" name="lacznoscProkurySposob' + i + '" placeholder="np. konieczność działania z drugim prokurentem albo członkiem zarządu: ">' +
                             '</div>';    
 
                     // Pole "Czy posiada PESEL?"
