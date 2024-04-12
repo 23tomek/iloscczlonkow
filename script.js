@@ -12,27 +12,27 @@ function activate_script() {
     
             // Imię pierwsze
             divCzlonka.innerHTML += '<br><label for="imiona' + i + '">Imię pierwsze:</label>' +
-                '<input type="text" id="imie' + i + '" name="imie' + i + '" required class="form-input-2>';
-        
+                '<input type="text" id="imie' + i + '" name="imie' + i + '" required class="form-input-2">';
+    
             // Imię drugie
             divCzlonka.innerHTML += '<br><label for="drugieImie' + i + '">Imię drugie:</label>' +
-                '<input type="text" id="drugieImie' + i + '" name="drugieImie' + i + '" required class="form-input-2>';
-        
+                '<input type="text" id="drugieImie' + i + '" name="drugieImie' + i + '" required class="form-input-2">';
+    
             // Nazwisko
             divCzlonka.innerHTML += '<br><label for="nazwisko' + i + '">Nazwisko:</label>' +
-                '<input type="text" id="nazwisko' + i + '" name="nazwisko' + i + '" required class="form-input-2>';
+                '<input type="text" id="nazwisko' + i + '" name="nazwisko' + i + '" required class="form-input-2">';
     
             // Adres
             divCzlonka.innerHTML += '<br><label for="adresDoreczen' + i + '">Adres:</label>' +
-                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input-2>';
+                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input-2">';
     
             // Adres do doręczeń
             divCzlonka.innerHTML += '<br><label for="adresDoreczen' + i + '">Adres do doręczeń:</label>' +
-                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input-2>';
+                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input-2">';
     
             // Funkcja w zarządzie
             divCzlonka.innerHTML += '<br><label for="funkcjaZarzadzie' + i + '">Funkcja w zarządzie: </label>' +
-                '<input type="text" id="funkcjaZarzadzie' + i + '" name="funkcjaZarzadzie' + i + '" required class="form-input-2 placeholder="Proszę wskazać funkcję (np. prezes zarządu, członek zarządu)">';
+                '<input type="text" id="funkcjaZarzadzie' + i + '" name="funkcjaZarzadzie' + i + '" required class="form-input-2" placeholder="Proszę wskazać funkcję (np. prezes zarządu, członek zarządu)">';
     
             // Pole "Czy posiada PESEL?"
             divCzlonka.innerHTML += '<br><label for="czyPosiadaPesel' + i + '">Czy posiada PESEL?</label>' +
@@ -55,15 +55,15 @@ function activate_script() {
                 if (czyPosiadaPesel === 'tak') {
                     // Pole PESEL
                     daneCzlonkaDiv.innerHTML += '<br><label for="peselCzlonka' + indexCzlonka + '">PESEL:</label>' +
-                        '<input type="text" id="peselCzlonka' + indexCzlonka + '" name="peselCzlonka' + indexCzlonka + '" required>';
+                        '<input type="text" id="peselCzlonka' + indexCzlonka + '" name="peselCzlonka' + indexCzlonka + '" required class="form-input-2">';
                 } else {
                     // Data ur.
                     daneCzlonkaDiv.innerHTML += '<br><label for="dataCzlonka' + indexCzlonka + '">Data urodzenia:</label>' +
-                        '<input type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required>';
+                        '<input type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required class="form-input-2">';
                 }
             });
         }
-    });
+    });    
     document.getElementById('czyProkuraCheckbox').addEventListener('change', function () {
         var czyProkura = this.checked;
         var iloscProkurentowDiv = document.getElementById('iloscProkurentowDiv');
