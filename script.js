@@ -12,7 +12,7 @@ function activate_script() {
     
             // Imię pierwsze
             divCzlonka.innerHTML += '<br><label for="imiona' + i + '">Imię pierwsze:</label>' +
-                '<input type="text" id="imie' + i + '" name="imie' + i + '" required class="form-input 2">';
+                '<input type="text" class="form-input 2" id="imie' + i + '" name="imie' + i + '" required class="form-input 2">';
     
             // Imię drugie
             divCzlonka.innerHTML += '<br><label for="drugieImie' + i + '">Imię drugie:</label>' +
