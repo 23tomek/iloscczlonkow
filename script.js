@@ -12,23 +12,23 @@ function activate_script() {
     
             // Imię pierwsze
             divCzlonka.innerHTML += '<br><label for="imiona' + i + '">Imię pierwsze:</label>' +
-                '<input type="text" id="imie' + i + '" name="imie' + i + '" required class="form-input 2">';
+                '<input type="text" id="imie' + i + '" name="imie' + i + '" required class="form-input 2>';
     
             // Imię drugie
             divCzlonka.innerHTML += '<br><label for="drugieImie' + i + '">Imię drugie:</label>' +
-                '<input type="text" id="drugieImie' + i + '" name="drugieImie' + i + '" required class="form-input 2">';
+                '<input type="text" id="drugieImie' + i + '" name="drugieImie' + i + '" required class="form-input 2>';
     
             // Nazwisko
             divCzlonka.innerHTML += '<br><label for="nazwisko' + i + '">Nazwisko:</label>' +
-                '<input type="text" id="nazwisko' + i + '" name="nazwisko' + i + '" required class="form-input 2">';
+                '<input type="text" id="nazwisko' + i + '" name="nazwisko' + i + '" required class="form-input 2>';
     
             // Adres
             divCzlonka.innerHTML += '<br><label for="adresDoreczen' + i + '">Adres:</label>' +
-                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input 2">';
+                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input 2>';
     
             // Adres do doręczeń
             divCzlonka.innerHTML += '<br><label for="adresDoreczen' + i + '">Adres do doręczeń:</label>' +
-                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input 2">';
+                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input 2>';
     
             // Funkcja w zarządzie
             divCzlonka.innerHTML += '<br><label for="funkcjaZarzadzie' + i + '">Funkcja w zarządzie: </label>' +
