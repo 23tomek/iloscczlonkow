@@ -16,19 +16,19 @@ function activate_script() {
     
             // Imię drugie
             divCzlonka.innerHTML += '<br><label for="drugieImie' + i + '">Imię drugie:</label>' +
-                '<input type="text" id="drugieImie' + i + '" name="drugieImie' + i + '" required class="form-input 2">';
+                '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieImie' + i + '" name="drugieImie' + i + '" required>';
     
             // Nazwisko
             divCzlonka.innerHTML += '<br><label for="nazwisko' + i + '">Nazwisko:</label>' +
-                '<input type="text" id="nazwisko' + i + '" name="nazwisko' + i + '" required class="form-input 2">';
+                '<input class="form-input-2 w-input" maxlength="256" type="text" id="nazwisko' + i + '" name="nazwisko' + i + '" required">';
     
             // Adres
             divCzlonka.innerHTML += '<br><label for="adresDoreczen' + i + '">Adres:</label>' +
-                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input 2">';
+                '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required>';
     
             // Adres do doręczeń
             divCzlonka.innerHTML += '<br><label for="adresDoreczen' + i + '">Adres do doręczeń:</label>' +
-                '<input type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required class="form-input 2">';
+                '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresDoreczen' + i + '" name="adresDoreczen' + i + '" required>';
     
             // Funkcja w zarządzie
             divCzlonka.innerHTML += '<br><label for="funkcjaZarzadzie' + i + '">Funkcja w zarządzie: </label>' +
@@ -55,11 +55,11 @@ function activate_script() {
                 if (czyPosiadaPesel === 'tak') {
                     // Pole PESEL
                     daneCzlonkaDiv.innerHTML += '<br><label for="peselCzlonka' + indexCzlonka + '">PESEL:</label>' +
-                        '<input type="text" id="peselCzlonka' + indexCzlonka + '" name="peselCzlonka' + indexCzlonka + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="peselCzlonka' + indexCzlonka + '" name="peselCzlonka' + indexCzlonka + '" required class="form-input 2">';
                 } else {
                     // Data ur.
                     daneCzlonkaDiv.innerHTML += '<br><label for="dataCzlonka' + indexCzlonka + '">Data urodzenia:</label>' +
-                        '<input type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required class="form-input 2">';
+                        '<input type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required>';
                 }
             });
         }
@@ -100,23 +100,23 @@ function activate_script() {
 
                     // Imię 
                     divProkurenta.innerHTML += '<br><label for="imieProkurent' + i + '">Imię pierwsze:</label>' +
-                        '<input type="text" id="imieProkurent' + i + '" name="imieProkurent' + i + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="imieProkurent' + i + '" name="imieProkurent' + i + '" required>';
 
                     // Drugie imię 
                     divProkurenta.innerHTML += '<br><label for="drugieImieProkurent' + i + '">Imię drugie:</label>' +
-                        '<input type="text" id="drugieImieProkurent' + i + '" name="drugieImieProkurent' + i + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieImieProkurent' + i + '" name="drugieImieProkurent' + i + '" required>';
 
                     // Nazwisko 
                     divProkurenta.innerHTML += '<br><label for="nazwiskoProkurent' + i + '">Nazwisko:</label>' +
-                        '<input type="text" id="nazwiskoProkurent' + i + '" name="nazwiskoProkurent' + i + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="nazwiskoProkurent' + i + '" name="nazwiskoProkurent' + i + '" required>';
 
                     // Adres
                     divProkurenta.innerHTML += '<br><label for="adresDoreczenProkurent' + i + '">Adres:</label>' +
-                        '<input type="text" id="adresDoreczenProkurent' + i + '" name="adresDoreczenProkurent' + i + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresDoreczenProkurent' + i + '" name="adresDoreczenProkurent' + i + '" required>';
 
                     // Adres do doręczeń
                     divProkurenta.innerHTML += '<br><label for="adresDoreczenProkurent' + i + '">Adres do doręczeń:</label>' +
-                        '<input type="text" id="adresDoreczenProkurent' + i + '" name="adresDoreczenProkurent' + i + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresDoreczenProkurent' + i + '" name="adresDoreczenProkurent' + i + '" required>';
 
                     // Rodzaj prokury
                       divProkurenta.innerHTML += '<br><label for="rodzajProkury' + i + '">Rodzaj prokury:</label>' +
@@ -151,7 +151,7 @@ function activate_script() {
                         if (czyPosiadaPesel === 'tak') {
                             // Pole PESEL
                             daneCzlonkaDiv.innerHTML += '<br><label for="peselCzlonka' + indexCzlonka + '">PESEL:</label>' +
-                                '<input type="text" id="peselCzlonka' + indexCzlonka + '" name="peselCzlonka' + indexCzlonka + '" required>';
+                                '<input class="form-input-2 w-input" maxlength="256" type="text" id="peselCzlonka' + indexCzlonka + '" name="peselCzlonka' + indexCzlonka + '" required>';
                         } else {
                             // Data ur.
                             daneCzlonkaDiv.innerHTML += '<br><label for="dataCzlonka' + indexCzlonka + '">Data urodzenia:</label>' +
@@ -198,23 +198,23 @@ function activate_script() {
                 if (czyOsobaFizyczna === 'tak') {
                     // IMIE
                     daneWspolnikaDiv.innerHTML += '<br><label for="imieWspolnika' + indexWspolnika + '">Imię pierwsze:</label>' +
-                        '<input type="text" id="imieWspolnika' + indexWspolnika + '" name="imieWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="imieWspolnika' + indexWspolnika + '" name="imieWspolnika' + indexWspolnika + '" required>';
                     // drugie IMIE
                     daneWspolnikaDiv.innerHTML += '<br><label for="drugieimieWspolnika' + indexWspolnika + '">Imię drugie:</label>' +
-                        '<input type="text" id="drugieimieWspolnika' + indexWspolnika + '" name="drugieimieWspolnika' + indexWspolnika + '" required class="form-input 2">';    
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieimieWspolnika' + indexWspolnika + '" name="drugieimieWspolnika' + indexWspolnika + '" required>';    
                     // NAZWISKO
                     daneWspolnikaDiv.innerHTML += '<br><label for="nazwiskoWspolnika' + indexWspolnika + '">Nazwisko:</label>' +
-                        '<input type="text" id="nazwiskoWspolnika' + indexWspolnika + '" name="nazwiskoWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="nazwiskoWspolnika' + indexWspolnika + '" name="nazwiskoWspolnika' + indexWspolnika + '" required">';
                     // ADRES        
                     daneWspolnikaDiv.innerHTML += '<br><label for="adresWspolnika' + indexWspolnika + '">Adres:</label>' +
-                        '<input type="text" id="adresWspolnika' + indexWspolnika + '" name="adresWspolnika' + indexWspolnika + '" required class="form-input "2>';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresWspolnika' + indexWspolnika + '" name="adresWspolnika' + indexWspolnika + '" required>';
                     // Adres do doręczeń
                     daneWspolnikaDiv.innerHTML += '<br><label for="adresDorWspolnika' + indexWspolnika + '">Adres do doręczeń:</label>' +
-                        '<input type="text" id="adresDorWspolnika' + indexWspolnika + '" name="adresDorWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresDorWspolnika' + indexWspolnika + '" name="adresDorWspolnika' + indexWspolnika + '" required>';
                     
                     // PESEL
                     daneWspolnikaDiv.innerHTML += '<br><label for="peselWspolnika' + indexWspolnika + '">PESEL:</label>' +
-                        '<input type="text" id="peselWspolnika' + indexWspolnika + '" name="peselWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="peselWspolnika' + indexWspolnika + '" name="peselWspolnika' + indexWspolnika + '" required">';
                     
                     //DATA ur
                     daneWspolnikaDiv.innerHTML += '<br><label for="dataUrodzeniaWspolnika' + indexWspolnika + '">Data urodzenia:</label>' +
@@ -222,7 +222,7 @@ function activate_script() {
                     
                     // Liczba udziałow
                     daneWspolnikaDiv.innerHTML += '<br><label for="liczbaUdzialowWspolnika' + indexWspolnika + '">Liczba udziałów, jakie wspólnik ma posiadać w kapitale zakładowym zakładanej spółki:</label>' +
-                        '<input type="text" id="liczbaUdzialowWspolnika' + indexWspolnika + '" name="liczbaUdzialowWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="liczbaUdzialowWspolnika' + indexWspolnika + '" name="liczbaUdzialowWspolnika' + indexWspolnika + '" required>';
                     
                     // Rodzaj wkładu
                     daneWspolnikaDiv.innerHTML += '<br><label for="rodzajWniesionegoWkladu' + indexWspolnika + '">Rodzaj wkładu wnoszonego do zakładanej spółki:</label>' +
@@ -235,28 +235,28 @@ function activate_script() {
                     
                     // wysokosc wkładu
                     daneWspolnikaDiv.innerHTML += '<br><label for="wysokoscWkladu' + indexWspolnika + '"><b>Wysokość wkładu</b> - w odniesieniu do wkładu pieniężnego albo <b>wartość wkładu</b> - w odniesieniu do wkładu niepieniężnego; w przypadku wkładu <b>mieszanego</b> należy zsumować wysokość i wartość poszczególnych wkładów: </label>' +
-                        '<input type="text" id="wysokoscWkladu' + indexWspolnika + '" name="wysokoscWkladu' + indexWspolnika + '" class="form-input-2"  placeholder="wysokość lub wartość wkładu należy podawać w PLN" required>';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="wysokoscWkladu' + indexWspolnika + '" name="wysokoscWkladu' + indexWspolnika + '" placeholder="wysokość lub wartość wkładu należy podawać w PLN" required>';
                     
                     // Opis wkladu
                     daneWspolnikaDiv.innerHTML += '<br><label for="opisWkladu' + indexWspolnika + '">W przypadku wkładu <b>niepieniężnego</b> proszę dokładnie opisać przedmiot tego wkładu: </label>' +
-                        '<input type="text" id="opisWkladu' + indexWspolnika + '" name="opisWkladu' + indexWspolnika + '" class="form-input-2" placeholder="np. samochód marki X, model X, VIN: X - o wartości (PLN) X">';                           
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="opisWkladu' + indexWspolnika + '" name="opisWkladu' + indexWspolnika + '" placeholder="np. samochód marki X, model X, VIN: X - o wartości (PLN) X">';                           
                 //NIE jest os fizyczna
                 } else {
                     // Firma 
                     daneWspolnikaDiv.innerHTML += '<br><label for="firmaWspolnika' + indexWspolnika + '">Firma (nazwa):</label>' +
-                        '<input type="text" id="firmaWspolnika' + indexWspolnika + '" name="firmaWspolnika' + indexWspolnika + '" required>';
+                        '<input class="form-input-2 w-input" maxlength="256"  type="text" id="firmaWspolnika' + indexWspolnika + '" name="firmaWspolnika' + indexWspolnika + '" required>';
                     
                     //Siedziba 
                     daneWspolnikaDiv.innerHTML += '<br><label for="siedzibaWspolnika' + indexWspolnika + '">Siedziba (adres):</label>' +
-                        '<input type="text" id="siedzibaWspolnika' + indexWspolnika + '" name="siedzibaWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="siedzibaWspolnika' + indexWspolnika + '" name="siedzibaWspolnika' + indexWspolnika + '" required>';
                     
                     // nr KRS
                     daneWspolnikaDiv.innerHTML += '<br><label for="krsWspolnika' + indexWspolnika + '">nr KRS:</label>' +
-                        '<input type="text" id="krsWspolnika' + indexWspolnika + '" name="KRSWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="krsWspolnika' + indexWspolnika + '" name="KRSWspolnika' + indexWspolnika + '" required">';
                     
                    // liczba udziałów
                     daneWspolnikaDiv.innerHTML += '<br><label for="liczbaUdzialowWspolnika' + indexWspolnika + '">Liczba udziałów, jakie wspólnik ma posiadać w kapitale zakładowym zakładanej spółki:</label>' +
-                        '<input type="text" id="liczbaUdzialowWspolnika' + indexWspolnika + '" name="liczbaUdzialowWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input  class="form-input-2 w-input" maxlength="256"type="text" id="liczbaUdzialowWspolnika' + indexWspolnika + '" name="liczbaUdzialowWspolnika' + indexWspolnika + '" required">';
                     // Rodzaj wkładu
                     daneWspolnikaDiv.innerHTML += '<br><label for="rodzajWniesionegoWkladu' + indexWspolnika + '">Rodzaj wkładu wnoszonego do zakładanej spółki:</label>' +
                         '<select id="rodzajWniesionegoWkladu' + indexWspolnika + '" name="rodzajWniesionegoWkladu' + indexWspolnika + '">' +
@@ -268,15 +268,15 @@ function activate_script() {
                     
                     // wysokosc wkładu
                     daneWspolnikaDiv.innerHTML += '<br><label for="wysokoscWkladu' + indexWspolnika + '"><b>Wysokość wkładu</b> – w odniesieniu do wkładu pieniężnego albo <b>wartość wkładu</b> – w odniesieniu do wkładu niepieniężnego; w przypadku wkładu <b>mieszanego</b> należy zsumować wysokość i wartość poszczególnych wkładów: </label>' +
-                        '<input type="text" id="wysokoscWkladu' + indexWspolnika + '" name="wysokoscWkladu' + indexWspolnika + '"  class="form-input-2" placeholder="wysokość lub wartość wkładu należy podawać w PLN"required>';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="wysokoscWkladu' + indexWspolnika + '" name="wysokoscWkladu' + indexWspolnika + '" placeholder="wysokość lub wartość wkładu należy podawać w PLN"required>';
                     
                     // Opis wkladu
                     daneWspolnikaDiv.innerHTML += '<br><label for="opisWkladu' + indexWspolnika + '">W przypadku wkładu <b>niepieniężnego</b> proszę dokładnie opisać przedmiot tego wkładu: </label>' +
-                        '<input type="text" id="opisWkladu' + indexWspolnika + '" name="opisWkladu' + indexWspolnika + '"  class="form-input 2" placeholder="np. samochód marki X, model X, VIN: X - o wartości (PLN) X" >';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="opisWkladu' + indexWspolnika + '" name="opisWkladu' + indexWspolnika + '" placeholder="np. samochód marki X, model X, VIN: X - o wartości (PLN) X" >';
                     
                     //spospob reprezentacji
                     daneWspolnikaDiv.innerHTML += '<br><label for="sposobReprezentacji' + indexWspolnika + '">Sposób reprezentacji spółki - wspólnika:</label>' +
-                        '<input type="text" id="sposobReprezentacji' + indexWspolnika + '" name="sposobReprezentacji' + indexWspolnika + '" class="form-input 2" placeholder="np. zarząd w sp. z o.o., wspólnicy w sp. j.">';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="sposobReprezentacji' + indexWspolnika + '" name="sposobReprezentacji' + indexWspolnika + '" placeholder="np. zarząd w sp. z o.o., wspólnicy w sp. j.">';
 
                     // zasady reprezentacji zrobic
                     daneWspolnikaDiv.innerHTML += '<br><label for="ZasadyreprezentacjiSpolki' + indexWspolnika + '">Zasady reprezentacji spółki - wspólnika: </label>' +
@@ -314,17 +314,17 @@ function activate_script() {
                           var osobaDiv = document.createElement('div');
                           osobaDiv.innerHTML += '<br><strong>Osoba ' + j + ' uprawniona do reprezentacji:</strong>';
                           osobaDiv.innerHTML += '<br><label for="imieOsobaUprawniona' + indexWspolnika + '_' + j + '">1. Imię pierwsze:</label>' +
-                              '<input type="text" id="imieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieOsobaUprawniona' + indexWspolnika + '' + j + '" required class="form-input 2">';
+                              '<input class="form-input-2 w-input" maxlength="256" type="text" id="imieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieOsobaUprawniona' + indexWspolnika + '' + j + '" required';
                           osobaDiv.innerHTML += '<br><label for="imieDrugieOsobaUprawniona' + indexWspolnika + '_' + j + '">2. Imię drugie:</label>' +
-                              '<input type="text" id="imieDrugieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieDrugieOsobaUprawniona' + indexWspolnika + '' + j + '">';
+                              '<input  class="form-input-2 w-input" maxlength="256" type="text" id="imieDrugieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieDrugieOsobaUprawniona' + indexWspolnika + '' + j + '">';
                           osobaDiv.innerHTML += '<br><label for="nazwiskoOsobaUprawniona' + indexWspolnika + '_' + j + '">3. Nazwisko:</label>' +
-                              '<input type="text" id="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" name="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" required class="form-input 2">';
+                              '<input  class="form-input-2 w-input" maxlength="256" type="text" id="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" name="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" required';
                           osobaDiv.innerHTML += '<br><label for="adresOsobaUprawniona' + indexWspolnika + '_' + j + '">4. Adres:</label>' +
-                              '<input type="text" id="adresOsobaUprawniona' + indexWspolnika + '' + j + '" name="adresOsobaUprawniona' + indexWspolnika + '' + j + '" required class="form-input 2">';
+                              '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresOsobaUprawniona' + indexWspolnika + '' + j + '" name="adresOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
                           osobaDiv.innerHTML += '<br><label for="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '_' + j + '">5. Adres do doręczeń:</label>' +
-                              '<input type="text" id="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '' + j + '" name="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '' + j + '" required class="form-input 2">';
+                              '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '' + j + '" name="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
                           osobaDiv.innerHTML += '<br><label for="peselOsobaUprawniona' + indexWspolnika + '_' + j + '">6. PESEL:</label>' +
-                              '<input type="text" id="peselOsobaUprawniona' + indexWspolnika + '' + j + '" name="peselOsobaUprawniona' + indexWspolnika + '' + j + '" required class="form-input 2">';
+                              '<input class="form-input-2 w-input" maxlength="256" type="text" id="peselOsobaUprawniona' + indexWspolnika + '' + j + '" name="peselOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
                           
 
                           reprezentaciDiv.appendChild(osobaDiv);
