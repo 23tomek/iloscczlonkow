@@ -59,7 +59,7 @@ function activate_script() {
                 } else {
                     // Data ur.
                     daneCzlonkaDiv.innerHTML += '<br><label for="dataCzlonka' + indexCzlonka + '">Data urodzenia:</label>' +
-                        '<input type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required>';
+                        '<input class="select-field w-select" type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required>';
                 }
             });
         }
@@ -155,7 +155,7 @@ function activate_script() {
                         } else {
                             // Data ur.
                             daneCzlonkaDiv.innerHTML += '<br><label for="dataCzlonka' + indexCzlonka + '">Data urodzenia:</label>' +
-                                '<input type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required>';
+                                '<input class="select-field w-select" type="date" id="dataCzlonka' + indexCzlonka + '" name="dataCzlonka' + indexCzlonka + '" required>';
                         }
                         
                         daneProkurentowDiv.appendChild(divProkurenta);
@@ -218,7 +218,7 @@ function activate_script() {
                     
                     //DATA ur
                     daneWspolnikaDiv.innerHTML += '<br><label for="dataUrodzeniaWspolnika' + indexWspolnika + '">Data urodzenia:</label>' +
-                        '<input type="date" id="dataUrodzeniaWspolnika' + indexWspolnika + '" name="dataUrodzeniaWspolnika' + indexWspolnika + '" required class="form-input 2">';
+                        '<input class="select-field w-select" type="date" id="dataUrodzeniaWspolnika' + indexWspolnika + '" name="dataUrodzeniaWspolnika' + indexWspolnika + '" required class="form-input 2">';
                     
                     // Liczba udziałow
                     daneWspolnikaDiv.innerHTML += '<br><label for="liczbaUdzialowWspolnika' + indexWspolnika + '">Liczba udziałów, jakie wspólnik ma posiadać w kapitale zakładowym zakładanej spółki:</label>' +
