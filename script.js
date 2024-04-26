@@ -16,7 +16,7 @@ function activate_script() {
     
             // Imię drugie
             divCzlonka.innerHTML += '<br><label for="drugieImie' + i + '">Imię drugie:</label>' +
-                '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieImie' + i + '" name="drugieImie' + i + '" required>';
+                '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieImie' + i + '" name="drugieImie' + i + '" required placeholder="w przypadku braku drugiego imienia proszę wpisać "brak"">';
     
             // Nazwisko
             divCzlonka.innerHTML += '<br><label for="nazwisko' + i + '">Nazwisko:</label>' +
@@ -104,7 +104,7 @@ function activate_script() {
 
                     // Drugie imię 
                     divProkurenta.innerHTML += '<br><label for="drugieImieProkurent' + i + '">Imię drugie:</label>' +
-                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieImieProkurent' + i + '" name="drugieImieProkurent' + i + '" required>';
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieImieProkurent' + i + '" name="drugieImieProkurent' + i + '" required placeholder="w przypadku braku drugiego imienia proszę wpisać "brak>';
 
                     // Nazwisko 
                     divProkurenta.innerHTML += '<br><label for="nazwiskoProkurent' + i + '">Nazwisko:</label>' +
@@ -201,7 +201,7 @@ function activate_script() {
                         '<input class="form-input-2 w-input" maxlength="256" type="text" id="imieWspolnika' + indexWspolnika + '" name="imieWspolnika' + indexWspolnika + '" required>';
                     // drugie IMIE
                     daneWspolnikaDiv.innerHTML += '<br><label for="drugieimieWspolnika' + indexWspolnika + '">Imię drugie:</label>' +
-                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieimieWspolnika' + indexWspolnika + '" name="drugieimieWspolnika' + indexWspolnika + '" required>';    
+                        '<input class="form-input-2 w-input" maxlength="256" type="text" id="drugieimieWspolnika' + indexWspolnika + '" name="drugieimieWspolnika' + indexWspolnika + '" required placeholder="w przypadku braku drugiego imienia proszę wpisać "brak>';    
                     // NAZWISKO
                     daneWspolnikaDiv.innerHTML += '<br><label for="nazwiskoWspolnika' + indexWspolnika + '">Nazwisko:</label>' +
                         '<input class="form-input-2 w-input" maxlength="256" type="text" id="nazwiskoWspolnika' + indexWspolnika + '" name="nazwiskoWspolnika' + indexWspolnika + '" required">';
