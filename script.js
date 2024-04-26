@@ -280,7 +280,7 @@ function activate_script() {
 
                     // zasady reprezentacji zrobic
                     daneWspolnikaDiv.innerHTML += '<br><label for="ZasadyreprezentacjiSpolki' + indexWspolnika + '">Zasady reprezentacji spółki - wspólnika: </label>' +
-                        '<select id="ZasadyreprezentacjiSpolki' + indexWspolnika + '" name="ZasadyreprezentacjiSpolki' + indexWspolnika + '">' +
+                        '<select class="select-field w-select" id="ZasadyreprezentacjiSpolki' + indexWspolnika + '" name="ZasadyreprezentacjiSpolki' + indexWspolnika + '">' +
                         '<option value="-">-</option>' +
                         '<option value="Indywidualna">indywidualna (każda osoba samodzielnie);</option>' +
                         '<option value="Inna">inna</option>' +
@@ -288,10 +288,10 @@ function activate_script() {
                         
                     // sposób reprezentacji spólki zrobic
                     daneWspolnikaDiv.innerHTML += '<br><label for="sposobReprezentacji' + indexWspolnika + '">W przypadku poprzedniego wyboru <b>"inna"</b> proszę wskazać zasady reprezentacji: </label>' +
-                        '<input type="text" id="sposobReprezentacji' + indexWspolnika + '" name="sposobReprezentacji' + indexWspolnika + '">'; 
+                        '<input class="form-input-2 w-input" type="text" id="sposobReprezentacji' + indexWspolnika + '" name="sposobReprezentacji' + indexWspolnika + '">'; 
                     // Pytanie o ilość osób uprawnionych do reprezentacji
                   daneWspolnikaDiv.innerHTML += '<br><label for="iloscUprawnionych' + indexWspolnika + '">Ile osób uprawnionych jest do reprezentacji?</label>' +
-                      '<select id="iloscUprawnionych' + indexWspolnika + '" name="iloscUprawnionych' + indexWspolnika + '">' +
+                      '<select class="select-field w-select" id="iloscUprawnionych' + indexWspolnika + '" name="iloscUprawnionych' + indexWspolnika + '">' +
                       '<option value="-">-</option>' +
                       '<option value="1">1</option>' +
                       '<option value="2">2</option>' +
