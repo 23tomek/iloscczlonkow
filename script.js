@@ -314,11 +314,11 @@ function activate_script() {
                           var osobaDiv = document.createElement('div');
                           osobaDiv.innerHTML += '<br><strong>Osoba ' + j + ' uprawniona do reprezentacji:</strong>';
                           osobaDiv.innerHTML += '<br><label for="imieOsobaUprawniona' + indexWspolnika + '_' + j + '">1. Imię pierwsze:</label>' +
-                              '<input class="form-input-2 w-input" maxlength="256" type="text" id="imieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieOsobaUprawniona' + indexWspolnika + '' + j + '" required';
+                              '<input class="form-input-2 w-input" maxlength="256" type="text" id="imieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
                           osobaDiv.innerHTML += '<br><label for="imieDrugieOsobaUprawniona' + indexWspolnika + '_' + j + '">2. Imię drugie:</label>' +
                               '<input  class="form-input-2 w-input" maxlength="256" type="text" id="imieDrugieOsobaUprawniona' + indexWspolnika + '' + j + '" name="imieDrugieOsobaUprawniona' + indexWspolnika + '' + j + '">';
                           osobaDiv.innerHTML += '<br><label for="nazwiskoOsobaUprawniona' + indexWspolnika + '_' + j + '">3. Nazwisko:</label>' +
-                              '<input  class="form-input-2 w-input" maxlength="256" type="text" id="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" name="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" required';
+                              '<input class="form-input-2 w-input" maxlength="256" type="text" id="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" name="nazwiskoOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
                           osobaDiv.innerHTML += '<br><label for="adresOsobaUprawniona' + indexWspolnika + '_' + j + '">4. Adres:</label>' +
                               '<input class="form-input-2 w-input" maxlength="256" type="text" id="adresOsobaUprawniona' + indexWspolnika + '' + j + '" name="adresOsobaUprawniona' + indexWspolnika + '' + j + '" required>';
                           osobaDiv.innerHTML += '<br><label for="adresDoręczeniaOsobaUprawniona' + indexWspolnika + '_' + j + '">5. Adres do doręczeń:</label>' +
