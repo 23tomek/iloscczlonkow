@@ -225,7 +225,7 @@ function activate_script() {
                         '<input class="form-input-2 w-input" maxlength="256" type="text" id="liczbaUdzialowWspolnika' + indexWspolnika + '" name="liczbaUdzialowWspolnika' + indexWspolnika + '" required>';
                     
                     // Rodzaj wkładu
-                    daneWspolnikaDiv.innerHTML += '<br><label for="rodzajWniesionegoWkladu' + indexWspolnika + '">Rodzaj wkładu wnoszonego do zakładanej spółki:</label>' +
+                    daneWspolnikaDiv.innerHTML += '<br><label for="rodzajWniesionegoWkladu' + indexWspolnika + '">Rodzaj wkładu wnoszonego do zakładanej spółki na pokrycie udziałów tego wspólnika:</label>' +
                         '<select class="select-field w-select" id="rodzajWniesionegoWkladu' + indexWspolnika + '" name="rodzajWniesionegoWkladu' + indexWspolnika + '">' +
                         '<option value="-">-</option>' +
                         '<option value="pieniężny">pieniężny</option>' +
@@ -275,11 +275,11 @@ function activate_script() {
                         '<input class="form-input-2 w-input" maxlength="256" type="text" id="opisWkladu' + indexWspolnika + '" name="opisWkladu' + indexWspolnika + '" placeholder="np. samochód marki X, model X, VIN: X - o wartości (PLN) X" >';
                     
                     //spospob reprezentacji
-                    daneWspolnikaDiv.innerHTML += '<br><label for="sposobReprezentacji' + indexWspolnika + '">Sposób reprezentacji spółki - wspólnika:</label>' +
+                    daneWspolnikaDiv.innerHTML += '<br><label for="sposobReprezentacji' + indexWspolnika + '">Sposób reprezentacji spółki wspólnika:</label>' +
                         '<input class="form-input-2 w-input" maxlength="256" type="text" id="sposobReprezentacji' + indexWspolnika + '" name="sposobReprezentacji' + indexWspolnika + '" placeholder="np. zarząd w sp. z o.o., wspólnicy w sp. j.">';
 
                     // zasady reprezentacji zrobic
-                    daneWspolnikaDiv.innerHTML += '<br><label for="ZasadyreprezentacjiSpolki' + indexWspolnika + '">Zasady reprezentacji spółki - wspólnika: </label>' +
+                    daneWspolnikaDiv.innerHTML += '<br><label for="ZasadyreprezentacjiSpolki' + indexWspolnika + '">Zasady reprezentacji spółki wspólnika: </label>' +
                         '<select class="select-field w-select" id="ZasadyreprezentacjiSpolki' + indexWspolnika + '" name="ZasadyreprezentacjiSpolki' + indexWspolnika + '">' +
                         '<option value="-">-</option>' +
                         '<option value="Indywidualna">indywidualna (każda osoba samodzielnie);</option>' +
